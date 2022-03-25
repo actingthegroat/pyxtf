@@ -140,10 +140,6 @@ def xtf_read_gen(path: str, types: List[XTFHeaderType] = None) -> Generator[
                 except KeyError:
                     xtf_idx[p_headertype] = [packet_start_loc]
 
-            # Pickle index file
-            with open(path_idx, mode='wb') as f_idx:
-                pickle.dump(xtf_idx, f_idx)
-
         return
 
 
